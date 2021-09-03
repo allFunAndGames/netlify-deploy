@@ -5,6 +5,6 @@ LABEL org.opencontainers.image.description="GitHub Action for automated deploy o
 LABEL org.opencontainers.image.authors="allfun@wearehackerone.com"
 
 # install required package
-npm install -g netlify-cli
+RUN npm install -g netlify-cli
 
-ENTRYPOINT=["netlify"]
+ENTRYPOINT ["/usr/local/bin/netlify"]
